@@ -16,10 +16,10 @@ unlet s:cpo_save
 syntax enable
 
 
-"" Eclim stuff
+" Eclim stuff
 filetype plugin indent on
 nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
-nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+"nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
 let g:EclimBrowser = 'open'
 
 "" NERDTree stuff
@@ -43,22 +43,27 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
-"" java compile
+" java compile
 map <F10> :call CompileJava()<CR>
 
 func! CompileJava()
 	:w
-"	:!javac "%" && mv -f "%:t:r".class ../bin/ 
-	:!javac "%" && mv -f *.class ../bin/
+	:!javac "%" && mv -f "%:t:r".class ../bin/
 endfunc
 
-"" run class
+" run class
 map <F11> :call RunClass()<CR>
 
 func! RunClass()
 	:!clear && java -cp ../bin/ "%:t:r"
 endfunc
 
+" compile and display latex
+map <F12> :call RunRuby() <CR>
+
+func! RunRuby()
+	:!ruby "%"
+endfunc
 
 
 set background=dark
@@ -77,8 +82,8 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 set tabstop=4
 set termencoding=utf-8
 set window=35
-"vim: set ft=vim :
+set number
+" vim: set ft=vim :
 "colors ir_black
 "colors neverland2
-set t_Co=256
 colors molokai
