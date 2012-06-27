@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 #Ignore the DS_Store
-/.DS_Store
+.DS_Store
 
 #Ignore vim swap files
 *.swp
