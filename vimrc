@@ -43,8 +43,23 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
+" cpp compile
+map <F10> :call CompileCPP()<CR>
+
+func! CompileCPP()
+	:w
+	:!g++ -o "%:t:r" "%" && mv -f "%:t:r" ../Debug/
+endfunc
+
+" run cpp program
+map <F11> :call RunCppProgram()<CR>
+
+func! RunCppProgram()
+	:!clear && ../Debug/"%:t:r"
+endfunc
+
 " java compile
-map <F10> :call CompileJava()<CR>
+"map <F10> :call CompileJava()<CR>
 
 func! CompileJava()
 	:w
@@ -52,9 +67,9 @@ func! CompileJava()
 endfunc
 
 " run class
-map <F11> :call RunClass()<CR>
+"map <F11> :call RunJavaClass()<CR>
 
-func! RunClass()
+func! RunJavaClass()
 	:!clear && java -cp ../bin/ "%:t:r"
 endfunc
 
