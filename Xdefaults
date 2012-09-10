@@ -14,8 +14,8 @@ URxvt*scrollBar_right:false
 !URxvt*boldFont:  -xos4-terminus-bold-*-normal-*-*-*-*-*-*-*-iso10646-1
 !URxvt*font: -xos4-terminus-medium-*-normal--12-*-*-*-*-*-iso8859-1
 !URxvt*boldFont: -xos4-terminus-bold-*-normal--12-*-*-*-*-*-iso8859-1
-URxvt*font: xft:Terminus:pixelsize=12,hinting=true,antialias=true
-!URxvt*font: xft:DejaVu Sans Mono:pixelsize=12,hinting=true,antialias=true
+!URxvt*font: xft:Terminus:pixelsize=12,hinting=true,antialias=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=12,hinting=true,antialias=true
 !! Consolas wont work in Gentoo without Infinality...
 !URxvt*font: xft:Consolas:pixelsize=13,hinting=true,antialias=true
 
