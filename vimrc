@@ -2,6 +2,7 @@ version 6.0
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'path_html': '~/Dropbox/Pubic/vimwiki/'}]
+let g:Powerline_symbols = 'fancy'
 set cpo&vim
 map! <S-Insert> <MiddleMouse>
 nmap gx <Plug>NetrwBrowseX
@@ -27,8 +28,8 @@ map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
 " au VimEnter * NERDTree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
 " Close all open buffers on entering a window if the only
@@ -88,6 +89,7 @@ set guifont=Deja\ Vu\ Sans\ Mono\ 12
 set guioptions=egmrLt
 set helplang=en
 set history=50
+set laststatus=2
 set modelines=0
 set mouse=a
 set nocompatible
