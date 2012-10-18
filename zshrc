@@ -10,7 +10,7 @@ ZSH_THEME="flazz"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias cswork="cd ~/Dropbox/Documents/school/2012\ Fall/CS-2433/workspace/"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
