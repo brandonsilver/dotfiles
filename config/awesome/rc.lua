@@ -37,8 +37,8 @@ layouts = {
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-	names  = { "ter", "dev", "com", "mpd", "www", "misc", "7", "8", "9" },
-	layout = { layouts[1], layouts[1], layouts[1], layouts[3], layouts[1], layouts[7], layouts[1], layouts[1], layouts[1] }
+	names  = { "ter", "dev", "com", "mpd", "www", "stdy", "7", "8", "9" },
+	layout = { layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] }
 	}
 	
 for s = 1, screen.count() do
@@ -160,7 +160,7 @@ pkgicon = widget({ type = "imagebox" })
 pkgicon.image = image(beautiful.widget_pkg)
 pkgwidget = widget({ type = "textbox"})
 -- Register widget
-vicious.register(pkgwidget, vicious.widgets.pkg, "$1 updates", 3700, "Gentoo")
+vicious.register(pkgwidget, vicious.widgets.pkg, "$1 updates", 3700, "Ubuntu")
 -- }}}
 
 -- {{{ GMail widget
@@ -512,7 +512,7 @@ end
 
 run_once("/home/brandon/.dropbox-dist/dropbox")
 run_once("xscreensaver")
-run_once("mpd")
+--run_once("mpd")
 run_once("firefox")
 run_once("sleep 1 && xcompmgr -cf -D 3 -o 0")
 run_once("sleep 2 && urxvtd -q -o -f")
