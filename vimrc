@@ -1,7 +1,6 @@
 version 6.0
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'path_html': '~/Dropbox/Pubic/vimwiki/'}]
 let g:Powerline_symbols = 'fancy'
 set cpo&vim
 map! <S-Insert> <MiddleMouse>
@@ -20,7 +19,7 @@ syntax enable
 " Eclim stuff
 filetype plugin indent on
 nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
-"nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
 let g:EclimBrowser = 'open'
 
 "" NERDTree stuff
@@ -74,9 +73,8 @@ func! RunJavaClass()
 	:!clear && java -cp ../bin/ "%:t:r"
 endfunc
 
-" compile and display latex
+" run the current file as a ruby script
 map <F12> :call RunRuby() <CR>
-
 func! RunRuby()
 	:!ruby "%"
 endfunc
