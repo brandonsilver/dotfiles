@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Volumes/MacHome/.config/awesome/vicious/widgets'
+let g:netrw_dirhist_2='/efi/rEFIt'
+let g:netrw_dirhist_3='/Volumes/home/tmp'
+let g:netrw_dirhist_4='/Volumes/home/Sites'
+let g:netrw_dirhist_5='/Volumes/home/Projects/rails-testing/blog/config'
+let g:netrw_dirhist_6='/Volumes/home/Dropbox/Documents/school/2012 Fall/CS-2433/notes'
+let g:netrw_dirhist_7='/Volumes/home/Projects/dotfiles/vim'
