@@ -1,7 +1,7 @@
 version 6.0
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 set cpo&vim
 map! <S-Insert> <MiddleMouse>
 nmap gx <Plug>NetrwBrowseX
