@@ -37,7 +37,7 @@ layouts = {
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-	names  = { "ter", "dev", "com", "mus", "www", "stdy", "7", "8", "9" },
+	names  = { "ter", "dev", "com", "mpd", "www", "stdy", "7", "8", "9" },
 	layout = { layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] }
 	}
 	
@@ -514,7 +514,7 @@ run_once("/home/brandon/.dropbox-dist/dropbox")
 run_once("xscreensaver")
 --run_once("mpd")
 run_once("firefox")
-run_once("sleep 1 && xcompmgr -cf -D 3 -o 0")
+--run_once("sleep 1 && xcompmgr -cf -D 3 -o 0")
 run_once("sleep 2 && urxvtd -q -o -f")
 --run_once("urxvtc -name taskpaper -e vim /home/brandon/Dropbox/notes/Todo.taskpaper")
 --run_once("thunderbird"}
