@@ -95,6 +95,9 @@ func! RunRuby()
 	:!ruby "%"
 endfunc
 
+" necessary for pathogen
+execute pathogen#infect()
+
 
 set background=dark
 set backspace=indent,eol,start
