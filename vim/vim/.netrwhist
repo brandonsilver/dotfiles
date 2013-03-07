@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Volumes/MacHome/.config/awesome/vicious/widgets'
-let g:netrw_dirhist_2='/efi/rEFIt'
-let g:netrw_dirhist_3='/Volumes/home/tmp'
-let g:netrw_dirhist_4='/Volumes/home/Sites'
-let g:netrw_dirhist_5='/Volumes/home/Projects/rails-testing/blog/config'
