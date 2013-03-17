@@ -8,7 +8,7 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 filetype plugin indent on
 syntax on
 set number
-set mouse=a
+"set mouse=a
 set mousehide
 set encoding=utf-8
 set laststatus=2
