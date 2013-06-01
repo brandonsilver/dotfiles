@@ -60,26 +60,26 @@ let Powerline_symbols = 'unicode'
 
 " My custom keybindings
 " cpp compile
-map <F10> :call CompileCPP()<CR>
+"map <F10> :call CompileCPP()<CR>
 func! CompileCPP()
     :w
     :!g++ -o "%:t:r" "%" && mv -f "%:t:r" ../Debug/
 endfunc
 " run cpp program
-map <F11> :call RunCppProgram()<CR>
+"map <F11> :call RunCppProgram()<CR>
 func! RunCppProgram()
   :!clear && ../Debug/"%:t:r"
 endfunc
 
 " java compile
-"map <F10> :call CompileJava()<CR>
+map <F10> :call CompileJava()<CR>
 func! CompileJava()
   :w
   :!javac "%" && mv -f "%:t:r".class ../bin/
 endfunc
 
 " run class
-"map <F11> :call RunJavaClass()<CR>
+map <F11> :call RunJavaClass()<CR>
 func! RunJavaClass()
   :!clear && java -cp ../bin/ "%:t:r"
 endfunc
