@@ -22,6 +22,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set bs=2
 
 " Theme Settings
 set background=dark
@@ -55,10 +56,15 @@ endfunction
 
 
 " vim-powerline
-let Powerline_symbols = 'unicode'
+"let Powerline_symbols = 'unicode'
 
 
 " My custom keybindings
+
+" Toggle paste indentation
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 " cpp compile
 "map <F10> :call CompileCPP()<CR>
 func! CompileCPP()
