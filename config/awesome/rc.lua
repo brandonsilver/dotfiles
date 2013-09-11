@@ -351,7 +351,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
-	awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
+	awful.key({ modkey, "Control" }, "e", function () awful.util.spawn("xscreensaver-command -lock") end),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
@@ -495,7 +495,7 @@ end
 do
   local cmds = 
   { 
-    "nitrogen --restore",
+--    "nitrogen --restore",
     --and so on...
   }
 
@@ -514,7 +514,7 @@ run_once("/home/brandon/.dropbox-dist/dropbox")
 run_once("xscreensaver")
 --run_once("mpd")
 run_once("firefox")
---run_once("sleep 1 && xcompmgr -cf -D 3 -o 0")
+run_once("sleep 1 && xcompmgr -cf -D 3 -o 0")
 run_once("sleep 2 && urxvtd -q -o -f")
 --run_once("urxvtc -name taskpaper -e vim /home/brandon/Dropbox/notes/Todo.taskpaper")
 --run_once("thunderbird"}
