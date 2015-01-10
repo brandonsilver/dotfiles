@@ -4,7 +4,7 @@ call pathogen#helptags()
 
 
 " Miscellaneous Settings
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 filetype plugin indent on
 syntax on
 set number
@@ -23,11 +23,15 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set bs=2
+set tw=100
 
 " Theme Settings
-set background=dark
-colors molokai
-
+"set background=dark
+"colors molokai
+set background=light
+colors solarized
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+"let g:solarized_termcolors=256
 
 " Nerdtree
 "autocmd vimenter * NERDTree
@@ -58,6 +62,10 @@ endfunction
 " vim-powerline
 "let Powerline_symbols = 'unicode'
 
+" new powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " My custom keybindings
 
