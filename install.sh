@@ -12,7 +12,18 @@ for d in "${DOTFILES[@]}"; do
 		echo Backing up "$HOME"/."$d" to "$HOME"/.dotfiles_$DATE.tar
 		tar -rf "$HOME"/.dotfiles_$DATE.tar "$HOME"/."$d"
 		echo Installing "$d" to "$HOME"/."$d"
-		cp -R "$d" "$HOME"/."$d"
+		if [[ -d "$d" ]]
+		then
+			mkdir "$HOME"/."$d"
+			cd "$d"
+			DIR_CONTENTS=(*)
+			for f in "${DIR_CONTENTS[@]}"; do
+				cp -R "$f" "$HOME"/."$d"/
+			done
+			cd ..
+		else
+			cp -R "$d" "$HOME"/."$d"
+		fi
 	fi
 
 done
