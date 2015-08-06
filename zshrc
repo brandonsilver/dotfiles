@@ -11,6 +11,9 @@ ZSH_THEME="flazz"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cswork="cd ~/Dropbox/Documents/school/2012\ Fall/CS-2433/workspace/"
+alias tmuxn='tmux new-session -s $$'
+_trap_exit() { tmux kill-session -t $$; }
+trap _trap_exit EXIT
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -37,4 +40,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.path.sh
 
 # Necessary for rvm to work...
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+#[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# For the powerline prompt
+. /usr/share/powerline/bindings/zsh/powerline.zsh

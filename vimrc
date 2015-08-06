@@ -8,7 +8,7 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 set number
-"set mouse=a
+set mouse=a
 set mousehide
 set encoding=utf-8
 set laststatus=2
@@ -28,7 +28,12 @@ set tw=100
 " Theme Settings
 "set background=dark
 "colors molokai
-set background=light
+" Fixes wierd behavior with suckless terminal (st) flipping terminal colors
+if (&term =~? 'st-256color' || &term =~? 'screen-256color') && !has('gui_running')
+    set background=dark
+else
+    set background=light
+endif
 colors solarized
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 "let g:solarized_termcolors=256
