@@ -63,9 +63,9 @@ endfunction
 "let Powerline_symbols = 'unicode'
 
 " new powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
 
 " My custom keybindings
 
