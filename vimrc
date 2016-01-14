@@ -40,28 +40,28 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 
 " Nerdtree
 "autocmd vimenter * NERDTree
-map <C-l> :tabn<CR>
-map <c-h> :tabp<CR>
-map <c-n> :tabnew<CR>
-let NERDTreeShowBookmarks=1
-let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=1
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
-let NERDTreeKeepTreeInNewTab=1
-let g:nerdtree_tabs_open_on_gui_startup=0
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
-function! s:CloseIfOnlyNerdTreeLeft()
-   if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-endfunction
+"map <C-l> :tabn<CR>
+"map <c-h> :tabp<CR>
+"map <c-n> :tabnew<CR>
+"let NERDTreeShowBookmarks=1
+"let NERDTreeChDirMode=0
+"let NERDTreeQuitOnOpen=1
+"let NERDTreeMouseMode=2
+"let NERDTreeShowHidden=1
+"let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
+"let NERDTreeKeepTreeInNewTab=1
+"let g:nerdtree_tabs_open_on_gui_startup=0
+"" Close all open buffers on entering a window if the only
+"" buffer that's left is the NERDTree buffer
+"function! s:CloseIfOnlyNerdTreeLeft()
+"   if exists("t:NERDTreeBufName")
+"    if bufwinnr(t:NERDTreeBufName) != -1
+"      if winnr("$") == 1
+"        q
+"      endif
+"    endif
+"  endif
+"endfunction
 
 
 " vim-powerline
@@ -108,3 +108,16 @@ endfunc
 func! RunRuby()
   :!ruby "%"
 endfunc
+
+" Convert the current file to HTML from Asciidoc
+func! ConvertCurrentFileFromAsciidocToHTML()
+    :w
+    :!asciidoc -o "%:t:r".html "%"
+endfunc
+map <F11> :call ConvertCurrentFileFromAsciidocToHTML() <CR>
+" Convert the current file to HTML
+func! CreateHtmlFromCurrentFile()
+    :w
+    :!pandoc -o "%:t:r".html "%"
+endfunc
+map <F12> :call CreateHtmlFromCurrentFile() <CR>
